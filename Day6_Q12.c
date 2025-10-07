@@ -7,13 +7,13 @@ int main(){
     if (a != 0)
     {
         if( a > 0){
-        printf("Number is Positive");
+        printf("Number is Positive \n");
     } else{
-        printf("Number is negative");
+        printf("Number is negative \n");
     }
     
 } else{
-    printf("Number is Zero");
+    printf("Number is Zero \n");
 }
 return 0;
 }
