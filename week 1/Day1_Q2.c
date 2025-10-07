@@ -2,9 +2,9 @@
 #include<stdio.h>
 int main(){
     int a,b;
-    printf("Enter 1st Number");
+    printf("Enter 1st Number : ");
     scanf("%d",&a);
-    printf("Enter 2nd Number");
+    printf("Enter 2nd Number : ");
     scanf("%d", &b);
     printf("Sum is : %d \n", a+b);
     printf(" Difference of a and b is : %d\n", a-b);
