@@ -2,32 +2,25 @@
 #include <stdio.h>
 
 int main() {
-    int num, temp, digit;
-    int sum = 0;
+    int num, i, sum = 0;
 
-    printf("Enter a number: ");
+    printf("Enter any number: ");
     scanf("%d", &num);
 
-    temp = num;  // Store original number
-
-    while (temp > 0) {
-        digit = temp % 10;
-
-        // Calculate factorial of the digit
-        int fact = 1;
-        for (int i = 1; i <= digit; i++) {
-            fact *= i;
+    // Checking for divisors of the number
+    for(i = 1; i < num; i++) {
+        if(num % i == 0) {
+            sum = sum + i;
         }
-
-        sum += fact;      // Add factorial to sum
-        temp /= 10;       // Remove last digit
     }
 
-    // Check if strong number
-    if (sum == num)
-        printf("%d is a Strong Number.\n", num);
-    else
-        printf("%d is NOT a Strong Number.\n", num);
+    // Comparing sum of divisors with the number itself
+    if(sum == num) {
+        printf("%d is a Perfect Number.\n", num);
+    }
+    else {
+        printf("%d is not a Perfect Number.\n", num);
+    }
 
     return 0;
 }
