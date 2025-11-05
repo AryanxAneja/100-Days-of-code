@@ -9,12 +9,12 @@ int main() {
     scanf("%d", &n);
 
     for(i = 1; i <= n; i++) {
-        int numerator = 2 * i - 1;     // Odd numbers: 1, 3, 5, 7, ...
-        int denominator = 2 * i;       // Even numbers: 2, 4, 6, 8, ...
-        sum += (float)numerator / denominator;
+        int num = 2 * i - 1;     // Odd numbers: 1, 3, 5, 7, ...
+        int den = 2 * i;       // Even numbers: 2, 4, 6, 8, ...
+        sum += (float)num / den;
     }
 
-    printf("The sum of the series up to %d terms is: %.2f\n", n, sum);
+    printf("The sum of the series up to %d terms is: %f\n", n, sum);
 
     return 0;
 }
