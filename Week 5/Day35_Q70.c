@@ -18,10 +18,9 @@ int main()
     for (int i = 0; i < n; i++){
         arr[i] = temp[i];
     }
-    printf("Array after right rotation: ");
+    printf("Array after rotation: ");
     for (int i = 0; i < n; i++) {
         printf("%d ", arr[i]);
     }
     return 0;
-
 }
