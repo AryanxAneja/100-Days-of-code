@@ -23,6 +23,6 @@ int main(){
             maxLen = currentLen;
         }
     }
-    printf("Length of longest substring: %d", maxLen);
+    printf("Length of longest substring is: %d", maxLen);
     return 0;
 }
