@@ -4,9 +4,9 @@ int main(){
     FILE*in;
     FILE*out;
     char ch;
-    in=fopen("info.txt","r");
+    in=fopen("input.txt.txt","r");
     if(in==NULL){
-        printf("info.txt not found\n");
+        printf("input.txt not found\n");
         return 0;
     }
     out=fopen("output.txt","w");
