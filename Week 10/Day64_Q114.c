@@ -5,19 +5,22 @@ int main(){
     char s[1000];
     printf("Enter a string: ");
     scanf("%s", s);
-    int n = strlen(s);
+    size_t n = strlen(s);
     int lastIndex[256];
     for(int i = 0; i < 256; i++){
         lastIndex[i] = -1;
     }
     int maxLen = 0;
     int start = 0;
-    for(int i = 0; i < n; i++){
+    for(size_t i = 0; i < n; i++){
         char ch = s[i];
-        if(lastIndex[ch] >= start){
-            start = lastIndex[ch] + 1;
+
+        if(lastIndex[(unsigned char)ch] >= start){
+            start = lastIndex[(unsigned char)ch] + 1;
         }
-        lastIndex[ch] = i;
+
+        lastIndex[(unsigned char)ch] = i;
+
         int currentLen = i - start + 1;
         if(currentLen > maxLen){
             maxLen = currentLen;
